@@ -18,18 +18,5 @@ public class ProduitController {
     public produit saveProduit(@RequestBody produit p){
         return produitRepository.save(p);
     }
-    @GetMapping("/returnAllProduct")
-    public List<produit> getProduits(){
-        return produitRepository.findAll();
-    }
 
-    @DeleteMapping("/produit/{id}")
-    public void delete(@PathVariable Long id){
-        produitRepository.deleteById(id);
-    }
-
-    @PutMapping("/updateproduit")
-    public produit updateProduct(@RequestBody produit p){
-       return produitRepository.save(p);
-    }
 }
